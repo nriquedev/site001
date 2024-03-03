@@ -22,7 +22,6 @@ module.exports = eleventyConfig => {
         dir: {
             input: 'src',
             output: '_site'
-        },
-        pathPrefix: "/site001/"
+        }
     }
 };
