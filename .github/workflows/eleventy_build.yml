@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@master
+        with:
+          sparse-checkout: |
+            .github
+            src
       - name: Build
         uses: TartanLlama/actions-eleventy@master
         with:
