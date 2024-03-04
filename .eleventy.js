@@ -16,7 +16,9 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPlugin(require('./config/custom-syntax-highlighting.js'));
 
     //Prefix to deplay to a subdir
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
+        extensions: "html, css, png, jpeg"
+    });
 
     //Return
     return {
