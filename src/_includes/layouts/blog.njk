@@ -2,7 +2,7 @@
 layout: 'layouts/base.njk'
 title: 'Blog'
 ---
-
+{# href="{{ site.baseurl + post.url }}">{{ post.data.title }} #}
     {%- for post in collections.posts  -%}
         <a  class="
                   link-secondary 
@@ -10,7 +10,7 @@ title: 'Blog'
                   link-underline-opacity-0 
                   link-opacity-25-hover
                  "
-            href="{{ site.baseurl + post.url }}">{{ post.data.title }}
+            href="{{ post.url }}">{{ post.data.title }}
             <span class="col fs-6">( {{ post.data.date | postDate }} ) </span>
             
         </a></br> 

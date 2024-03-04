@@ -1,4 +1,5 @@
-const { DateTime } = require("luxon");
+//const { DateTime } = require("luxon");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = eleventyConfig => {
 
@@ -14,11 +15,12 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPlugin(require('./config/custom-filters.js'));
     eleventyConfig.addPlugin(require('./config/custom-syntax-highlighting.js'));
 
-    //Add path prefix for gh-pages site ---> site001
-
+    //Prefix to deplay to a subdir
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
     //Return
     return {
+        pathPrefix: "/site001/",
         dir: {
             input: 'src',
             output: '_site'
