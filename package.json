@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch src/assets/sass:src/assets/css",
-    "build:sass": "sass src/assets/sass:src/assets/css",
-    "watch:eleventy": "eleventy --serve --formats=html,md,jpg,jpeg,png,css",
-    "build:eleventy": "npx eleventy",
-    "start": "npm-run-all build:sass --parallel watch:*",
-    "start:build": "npm-run-all build:sass",
-    "build": "npm-run-all build:*"
+
+
+    "ep-build:sass": "sass src/assets/sass:src/assets/css",
+    "ep-build": "npm-run-all ep-build:sass",
+    "start": "npx @11ty/eleventy --formats=html,md,jpg,jpeg,png,css"
+
+
   },
   "keywords": [],
   "author": "",

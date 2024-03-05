@@ -4,26 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
-
-    "sass-watch:sass": "sass --watch src/assets/sass:_site/assets/css",
-    "sass-build:sass": "sass src/assets/sass:_site/assets/css",
-    "sass-watch:eleventy": "eleventy --serve --formats=html,md,jpg,jpeg",
+    "watch:sass": "sass --watch src/assets/sass:src/assets/css",
+    "build:sass": "sass src/assets/sass:src/assets/css",
+    "watch:eleventy": "eleventy --serve --formats=html,md,jpg,jpeg,png,css",
     "build:eleventy": "npx eleventy",
-    "sass-start": "npm-run-all sass-build:sass --parallel sass-watch:*",
-    "sass-build": "npm-run-all sass-build:*"
-
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "start:build": "npm-run-all build:sass",
+    "build": "npm-run-all build:*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.71.1"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "luxon": "^3.4.4"
+    "luxon": "^3.4.4",
+    "markdown-it": "^14.0.0"
   }
 }
