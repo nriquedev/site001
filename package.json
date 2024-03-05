@@ -9,6 +9,7 @@
     "watch:eleventy": "eleventy --serve --formats=html,md,jpg,jpeg,png,css",
     "build:eleventy": "npx eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
+    "start:build": "npm-run-all build:sass",
     "build": "npm-run-all build:*"
   },
   "keywords": [],
