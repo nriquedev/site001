@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --watch src/assets/sass:_site/assets/css",
-    "build:sass": "sass src/assets/sass:_site/assets/css",
+    "build:sass": "sass src/assets/sass:src/assets/css",
     "watch:eleventy": "eleventy --serve --formats=html,md,jpg,jpeg,png",
     "build:eleventy": "npx eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
