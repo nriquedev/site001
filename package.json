@@ -7,9 +7,12 @@
 
 
     "ep-build:sass": "sass src/assets/sass:src/assets/css",
-    "ep-build": "npm-run-all ep-build:sass",
-    "start": "npx @11ty/eleventy --formats=html,md,jpg,jpeg,png,css"
+    "ep-watch:sass": "sass src/assets/sass:src/assets/css",
+    "ep-build:eleventy": "npx eleventy --formats=html,md,jpg,jpeg,png,css",
+    "ep-watch:eleventy": "eleventy --serve --formats=html,md,jpg,jpeg,png,css",
 
+    "ep-build-all": "npm run ep-build:sass && npm run ep-build:eleventy",
+    "start": "npm-run-all ep-build:sass ep-watch:sass ep-build:eleventy ep-watch:eleventy"
 
   },
   "keywords": [],
