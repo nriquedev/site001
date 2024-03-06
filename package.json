@@ -6,7 +6,7 @@
   "scripts": {
 
 
-    "ep-build:sass": "sass src/assets/sass:src/assets/css",
+    "ep-build:sass": "sass src/assets/sass:src/assets/css --style compressed",
     "ep-watch:sass": "sass src/assets/sass:src/assets/css",
     "ep-build:eleventy": "npx eleventy --formats=html,md,jpg,jpeg,png,css",
     "ep-watch:eleventy": "eleventy --serve --formats=html,md,jpg,jpeg,png,css",
