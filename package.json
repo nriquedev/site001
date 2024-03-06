@@ -4,16 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
-
     "ep-build:sass": "sass src/assets/sass:src/assets/css --style compressed",
     "ep-watch:sass": "sass src/assets/sass:src/assets/css",
     "ep-build:eleventy": "npx eleventy --formats=html,md,jpg,jpeg,png,css",
     "ep-watch:eleventy": "eleventy --serve --formats=html,md,jpg,jpeg,png,css",
-
     "ep-build-all": "npm run ep-build:sass && npm run ep-build:eleventy",
     "start": "npm-run-all ep-build:sass ep-watch:sass ep-build:eleventy ep-watch:eleventy"
-
   },
   "keywords": [],
   "author": "",
@@ -26,6 +22,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
     "luxon": "^3.4.4",
     "markdown-it": "^14.0.0"
   }

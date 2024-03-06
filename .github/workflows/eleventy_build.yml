@@ -22,28 +22,3 @@ jobs:
         with:
           publish_dir: ./_site 
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-
-# name: Eleventy Build
-# on: 
-#   push:
-#     paths-ignore:
-#       - README.md
-
-# jobs:
-#   build-deploy:
-#     name: Eleventy Build
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Git Checkout
-#         uses: actions/checkout@master
-#       - name: Build
-#         uses: TartanLlama/actions-eleventy@master
-#         with:
-#           args: --formats=html,md,jpg,jpeg,png
-#           install_dependencies: true
-#       - name: Deploy
-#         uses: peaceiris/actions-gh-pages@v3.9.3
-#         with:
-#           publish_dir: ./_site 
-#           github_token: ${{ secrets.GITHUB_TOKEN }}

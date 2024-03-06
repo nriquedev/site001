@@ -1,6 +1,5 @@
 //const { DateTime } = require("luxon");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-require("dotenv").config();
 
 module.exports = eleventyConfig => {
 
@@ -20,11 +19,10 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
         extensions: "html, css, png, jpeg"
     });
-    
-    console.log("env var: ", process.env.DEV_ENVIRONMENT);
+
     //Return
     return {
-        pathPrefix: process.env.DEV_ENVIRONMENT === 'true' ? "" : "/site001/",
+        pathPrefix: "/site001/",
         dir: {
             input: 'src',
             output: '_site'
